@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <AppSearch></AppSearch>
+  <AppSearch @ricerca="cercaFilm()"></AppSearch>
   <AppMain></AppMain>
 </template>
 

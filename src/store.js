@@ -4,5 +4,5 @@ export const store = reactive({
     film: [],
     // TVCall: '',
     // serie: [],
-    userInput: '',
+    userInput: "",
 });

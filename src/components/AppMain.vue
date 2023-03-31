@@ -15,8 +15,8 @@
         created() {
             axios.get('https://api.themoviedb.org/3/search/movie?api_key=fab6325a9f2906bf51076f0a3ebd6c67').then((res)=>{
                 this.store.film = res.data;
-                console.log(res.data)
-                console.log(this.store.film[0])
+                console.log(res)
+                // console.log(this.store.film)
             });
         },
         methods: {
@@ -26,8 +26,9 @@
                     apiValore += `&query=${this.store.userInput}`;
                     console.log(apiValore)
                 }
-                axios.get(apiValore).then((res) => {
-                    this.store.film = res.data
+                axios.get(apiValore).then((response) => {
+                    this.store.film = res.data;
+                    console.log(response.data.results)
                 });
             }
         }

@@ -7,6 +7,7 @@
                 store,
             }
         },
+        emits: ['ricerca']
     }
 </script>
 
@@ -14,7 +15,7 @@
     <nav id="search-bar">
         <div>LOGO</div>
         <div>
-            <input @keyup.enter="$emit('ricerca')" type="text">
+            <input v-model="store.userInput" @keyup.enter="$emit('ricerca')" type="text">
             <button @click="$emit('ricerca')">Cerca</button>
         </div>
     </nav>
