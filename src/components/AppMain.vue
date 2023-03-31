@@ -1,6 +1,7 @@
 <script>
     import {store} from "../store.js";
     import FilmCard from "./FilmCard.vue";
+    import SerieCard from "./SerieCard.vue";
     // import axios from "axios";
     // import AppSearch from "./AppSearch.vue";
     export default {
@@ -12,6 +13,7 @@
         },
          components: {
             FilmCard,
+            SerieCard,
         //     AppSearch,
          },
     }
@@ -19,7 +21,12 @@
 
 <template>
     <div id="lista-film">
+        <div><h2>i tuoi film</h2></div>
         <FilmCard v-for="pellicola in store.film" :movie="pellicola"></FilmCard>
+    </div>
+    <div id="lista-serie">
+        <div><h2>le tue serie</h2></div>
+        <SerieCard v-for="teleFilm in store.serie" :series="teleFilm"></SerieCard>
     </div>
 </template>
 

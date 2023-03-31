@@ -21,23 +21,43 @@
       });
     },
     methods: {
-      cercaFilm() {
-        let apiValore = this.store.filmCall
-        if(this.store.userInput != "") {
-          apiValore += `&query=${this.store.userInput}`;
-          console.log(apiValore)
+      cosaGuardo() {
+        let apiValoreUno = this.store.filmCall
+        if (this.store.userInput != "") {
+          apiValoreUno += `&query=${this.store.userInput}`;
+          console.log(apiValoreUno)
         }
-        axios.get(apiValore).then((response) => {
-        this.store.film = response.data.results;
-        console.log(response.data.results)
+        axios.get(apiValoreUno).then((response) => {
+          this.store.film = response.data.results;
+          console.log(response.data.results)
         });
-      }
+        let apiValoreDue = this.store.TVCall
+        if (this.store.userInput != "") {
+          apiValoreDue += `&query=${this.store.userInput}`;
+          console.log(apiValoreDue)
+        }
+        axios.get(apiValoreDue).then((response) => {
+          this.store.serie = response.data.results;
+          console.log(response.data.results)
+        });
+      },
+      // cercaSerie() {
+      //   let apiValore = this.store.TVCall
+      //   if(this.store.userInput != "") {
+      //     apiValore += `&query=${this.store.userInput}`;
+      //     console.log(apiValore)
+      //   }
+      //   axios.get(apiValore).then((response) => {
+      //     this.store.serie = response.data.results;
+      //     console.log(response.data.results)
+      //   });
+      // }
     }
   }
 </script>
 
 <template>
-  <AppSearch @ricerca="cercaFilm()"></AppSearch>
+  <AppSearch @ricerca="cosaGuardo()"></AppSearch>
   <AppMain></AppMain>
 </template>
 

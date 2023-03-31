@@ -13,7 +13,7 @@
 
 <template>
     <nav id="search-bar">
-        <div>LOGO</div>
+        <div><h1>LOGO</h1></div>
         <div>
             <input v-model="store.userInput" @keyup.enter="$emit('ricerca')" type="text">
             <button @click="$emit('ricerca')">Cerca</button>
