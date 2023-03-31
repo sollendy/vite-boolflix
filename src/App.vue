@@ -28,7 +28,7 @@
           console.log(apiValore)
         }
         axios.get(apiValore).then((response) => {
-        this.store.film = response.data;
+        this.store.film = response.data.results;
         console.log(response.data.results)
         });
       }
