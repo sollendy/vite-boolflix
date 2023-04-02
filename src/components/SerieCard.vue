@@ -16,7 +16,7 @@
 <template>
     <div class="cards">
         <div class="card">
-            <!-- <img :src="`series.${image.tmdb.org/t/p/w92}poster_path`" alt="locandina"> -->
+            <img :src="`https://image.tmdb.org/t/p/w342`+series.poster_path" alt="locandina">
             <div class="card-specs">
                 <div>Titolo: <strong>{{ series.name }}</strong></div>
                 <div>Titolo originale: <i>{{ series.original_name }}</i></div>
@@ -27,6 +27,6 @@
     </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

@@ -27,7 +27,7 @@
 <template>
     <div class="cards">
         <div class="card">
-            <!-- <img :src="`${image.tmdb.org/t/p/w342}.movie.poster_path`" alt="locandina"> -->
+            <img :src="`https://image.tmdb.org/t/p/w342` + movie.poster_path" alt="locandina">
             <div class="card-specs">
                 <div>Titolo: <strong>{{ movie.title }}</strong></div>
                 <div>Titolo originale: <i>{{ movie.original_title }}</i></div>
