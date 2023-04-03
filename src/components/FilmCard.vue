@@ -1,4 +1,5 @@
 <script>
+    import "font-awesome/css/font-awesome.css";
     import "/node_modules/flag-icons/css/flag-icons.min.css";
     export default {
         name: "FilmCard",
@@ -53,7 +54,7 @@
                 <div>Titolo: <strong>{{ movie.title }}</strong></div>
                 <div>Titolo originale: <i>{{ movie.original_title }}</i></div>
                 <div>Lingua Originale: <span :class="`fi fi-${bandierina} fis`"></span></div>
-                <div>Punteggio: <i>{{ movie.vote_average }}</i></div>
+                <div>Punteggio:<i class="fa-solid fa-star" style="color: #e7eb00;"></i><!--{{ movie.vote_average }}--></div>
             </div>
         </div>
     </div>

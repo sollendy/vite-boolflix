@@ -1,5 +1,6 @@
 <script>
     import {store} from "../store.js";
+    import 'font-awesome/css/font-awesome.css';
     import FilmCard from "./FilmCard.vue";
     import SerieCard from "./SerieCard.vue";
     // import axios from "axios";
