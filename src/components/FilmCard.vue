@@ -12,22 +12,34 @@
         },
         computed: {
             bandierina() {
-                let lingua = this.movie.original_language;
-                if (lingua = "en") {
-                    lingua = "gb";
-                    console.log(lingua);
-                }  else if (lingua = "ja") {
-                         lingua = "jp"
-                 } else if (lingua = "ko") {
-                     lingua = "kr"
-                 } else if (lingua = "zh") {
-                     lingua = "cn"
-                 } else {
-                     lingua = this.movie.original_language
-                 }
-                return {
-                    lingua
+                switch (this.movie.original_language) {
+                    case "en":
+                        return "gb";
+                    case "ja":
+                        return "jp";
+                    case "zh":
+                        return "cn";
+                    case "ko":
+                        return "kr";
+                    default:
+                        return this.movie.original_language;
                 }
+                // let lingua = this.movie.original_language;
+                // if (lingua = "en") {
+                //     lingua = "gb";
+                //     console.log(lingua);
+                // }  else if (lingua = "ja") {
+                //          lingua = "jp"
+                // } else if (lingua = "ko") {
+                //      lingua = "kr"
+                // } else if (lingua = "zh") {
+                //      lingua = "cn"
+                // } else {
+                //      lingua = this.movie.original_language
+                // }
+                // return {
+                //     lingua
+                // }
             }
         }
     }
