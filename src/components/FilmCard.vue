@@ -56,15 +56,14 @@
             <img :src="`https://image.tmdb.org/t/p/w342` + movie.poster_path" alt="locandina">
             <div class="card-specs">
                 <div>Titolo: <strong>{{ movie.title }}</strong></div>
-                <div>Titolo originale: <i>{{ movie.original_title }}</i></div>
+                <div>Titolo Originale: <i>{{ movie.original_title }}</i></div>
                 <div>Lingua Originale: <span :class="`fi fi-${bandierina} fis`"></span></div>
                 <div>Punteggio: 
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    {{setScore}}
+                    <i class="stelle fa-solid fa-star" :class="{'activeStar':setScore > 0}"></i>
+                    <i class="stelle fa-solid fa-star" :class="{'activeStar':setScore > 1}"></i>
+                    <i class="stelle fa-solid fa-star" :class="{'activeStar':setScore > 2}"></i>
+                    <i class="stelle fa-solid fa-star" :class="{'activeStar':setScore > 3}"></i>
+                    <i class="stelle fa-solid fa-star" :class="{'activeStar':setScore > 4}"></i>
                 </div>
             </div>
         </div>
@@ -72,5 +71,11 @@
 </template>
 
 <style lang="scss" scoped>
+    .stelle {
+        color: grey;
+    }
+    .activeStar {
+        color: yellow;
+    }
     // @import "/node_modules/flag-icons/css/flag-icons.min.css"
 </style>
