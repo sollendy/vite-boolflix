@@ -22,21 +22,21 @@
     },
     methods: {
       cosaGuardo() {
-        let apiValoreUno = this.store.filmCall
+        let apiFilm = this.store.filmCall
         if (this.store.userInput != "") {
-          apiValoreUno += `&query=${this.store.userInput}`;
-          console.log(apiValoreUno)
+          apiFilm += `&query=${this.store.userInput}`;
+          console.log(apiFilm)
         }
-        axios.get(apiValoreUno).then((response) => {
+        axios.get(apiFilm).then((response) => {
           this.store.film = response.data.results;
           console.log(response.data.results)
         });
-        let apiValoreDue = this.store.TVCall
+        let apiSerie = this.store.TVCall
         if (this.store.userInput != "") {
-          apiValoreDue += `&query=${this.store.userInput}`;
-          console.log(apiValoreDue)
+          apiSerie += `&query=${this.store.userInput}`;
+          console.log(apiSerie)
         }
-        axios.get(apiValoreDue).then((response) => {
+        axios.get(apiSerie).then((response) => {
           this.store.serie = response.data.results;
           console.log(response.data.results)
         });
