@@ -1,5 +1,5 @@
 <script>
-  import 'font-awesome/css/font-awesome.css';
+  // import 'font-awesome/css/font-awesome.css';
   import { store } from "./store";
   import axios from "axios";
   import AppMain from './components/AppMain.vue';
