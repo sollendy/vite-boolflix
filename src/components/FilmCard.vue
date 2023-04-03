@@ -1,5 +1,5 @@
 <script>
-    import "font-awesome/css/font-awesome.css";
+    // import "font-awesome/css/font-awesome.css";
     import "/node_modules/flag-icons/css/flag-icons.min.css";
     export default {
         name: "FilmCard",
@@ -41,6 +41,15 @@
                 // return {
                 //     lingua
                 // }
+            },
+            //credo di starla facendo male non è così che si converte una cifra da 1 a 10 in una da 1 a 5 insomma per come la sto facendo io pare che tutti sti film siano capolavori
+            setScore() {
+                if (this.movie.vote_average > 5) {
+                    this.movie.vote_average = 5;
+                } else if () {
+
+                }
+                return this.movie.vote_average
             }
         }
     }
@@ -54,7 +63,14 @@
                 <div>Titolo: <strong>{{ movie.title }}</strong></div>
                 <div>Titolo originale: <i>{{ movie.original_title }}</i></div>
                 <div>Lingua Originale: <span :class="`fi fi-${bandierina} fis`"></span></div>
-                <div>Punteggio:<i class="fa-solid fa-star" style="color: #e7eb00;"></i><!--{{ movie.vote_average }}--></div>
+                <div>Punteggio: 
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    {{setScore}}
+                </div>
             </div>
         </div>
     </div>

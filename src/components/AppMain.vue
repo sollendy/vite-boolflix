@@ -1,8 +1,8 @@
 <script>
     import {store} from "../store.js";
-    // import 'font-awesome/css/font-awesome.css';
     import FilmCard from "./FilmCard.vue";
     import SerieCard from "./SerieCard.vue";
+    // import 'font-awesome/css/font-awesome.css';
     // import axios from "axios";
     // import AppSearch from "./AppSearch.vue";
     export default {
