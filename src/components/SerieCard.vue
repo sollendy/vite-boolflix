@@ -69,6 +69,11 @@
 </template>
 
 <style lang="scss" scoped>
+    // div.card {
+    //     img {
+    //         width: 100px;
+    //     }
+    // }
     .stelle {
         color: grey;
     }

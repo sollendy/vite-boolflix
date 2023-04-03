@@ -13,7 +13,7 @@
 
 <template>
     <nav id="search-bar">
-        <div><h1>LOGO</h1></div>
+        <div><h1>BOOLFLIX</h1></div>
         <div>
             <input v-model="store.userInput" @keyup.enter="$emit('ricerca')" type="text">
             <button @click="$emit('ricerca')">Cerca</button>
@@ -22,5 +22,15 @@
 </template>
 
 <style lang="scss" scoped>
-
+#search-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    div{
+        h1{
+            color: red;
+        }
+    }
+}
 </style>
