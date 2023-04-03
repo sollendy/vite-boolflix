@@ -44,12 +44,7 @@
             },
             //credo di starla facendo male non è così che si converte una cifra da 1 a 10 in una da 1 a 5 insomma per come la sto facendo io tutti sti film hanno il punteggio da capolavori
             setScore() {
-                if (this.movie.vote_average > 5) {
-                    this.movie.vote_average = 5;
-                } else if () {
-
-                }
-                return this.movie.vote_average
+                return Math.ceil(this.movie.vote_average / 2)
             }
         }
     }

@@ -40,6 +40,9 @@
                 // return {
                 //     lingua
                 // }
+            },
+            setScore() {
+                return Math.ceil(this.series.vote_average / 2)
             }
         }
     }
@@ -53,7 +56,14 @@
                 <div>Titolo: <strong>{{ series.name }}</strong></div>
                 <div>Titolo originale: <i>{{ series.original_name }}</i></div>
                 <div>Lingua Originale: <span :class="`fi fi-${bandierina} fis`"></span></div>
-                <div>Punteggio: <i>{{ series.vote_average }}</i></div>
+                <div>Punteggio:
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    {{setScore}}
+                </div>
             </div>
         </div>
     </div>
