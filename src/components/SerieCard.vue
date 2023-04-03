@@ -57,11 +57,11 @@
                 <div>Titolo Originale: <i>{{ series.original_name }}</i></div>
                 <div>Lingua Originale: <span :class="`fi fi-${bandierina} fis`"></span></div>
                 <div>Punteggio:
-                    <i class="fa-solid fa-star" :class="{'activeStar':setScore > 0}"></i>
-                    <i class="fa-solid fa-star" :class="{'activeStar':setScore > 1}"></i>
-                    <i class="fa-solid fa-star" :class="{'activeStar':setScore > 2}"></i>
-                    <i class="fa-solid fa-star" :class="{'activeStar':setScore > 3}"></i>
-                    <i class="fa-solid fa-star" :class="{'activeStar':setScore > 4}"></i>
+                    <i class="stelle fa-solid fa-star" :class="{'activeStar':setScore > 0}"></i>
+                    <i class="stelle fa-solid fa-star" :class="{'activeStar':setScore > 1}"></i>
+                    <i class="stelle fa-solid fa-star" :class="{'activeStar':setScore > 2}"></i>
+                    <i class="stelle fa-solid fa-star" :class="{'activeStar':setScore > 3}"></i>
+                    <i class="stelle fa-solid fa-star" :class="{'activeStar':setScore > 4}"></i>
                 </div>
             </div>
         </div>
@@ -69,6 +69,9 @@
 </template>
 
 <style lang="scss" scoped>
+    .stelle {
+        color: grey;
+    }
     .activeStar {
         color: yellow;
     }
