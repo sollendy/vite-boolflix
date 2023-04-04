@@ -23,7 +23,9 @@
 <template>
     <div id="lista-film">
         <div><h2>i tuoi film</h2></div>
-        <FilmCard v-for="pellicola in store.film" :movie="pellicola"></FilmCard>
+        <div id="film-cnt">
+            <FilmCard v-for="pellicola in store.film" :movie="pellicola"></FilmCard>
+        </div>
     </div>
     <div id="lista-serie">
         <div><h2>le tue serie</h2></div>
@@ -32,5 +34,7 @@
 </template>
 
 <style lang="scss" scoped>
-
+#film-cnt {
+    // display: flex;
+}
 </style>
