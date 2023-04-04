@@ -74,6 +74,10 @@
     //         width: 100px;
     //     }
     // }
+
+    // .cards {
+    //     width: 20%;
+    // }
     .stelle {
         color: grey;
     }

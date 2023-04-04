@@ -21,34 +21,45 @@
 </script>
 
 <template>
-    <div id="lista-film">
-        <div><h2>i tuoi film</h2></div>
-        <div id="film-cnt">
-            <FilmCard v-for="pellicola in store.film" :movie="pellicola"></FilmCard>
+    <section id="app-body">
+        <div id="lista-film">
+            <div><h2>i tuoi film</h2></div>
+            <div id="film-cnt">
+                <FilmCard v-for="pellicola in store.film" :movie="pellicola"></FilmCard>
+            </div>
         </div>
-    </div>
-    <div id="lista-serie">
-        <div><h2>le tue serie</h2></div>
-        <SerieCard v-for="teleFilm in store.serie" :series="teleFilm"></SerieCard>
-    </div>
+        <div id="lista-serie">
+            <div><h2>le tue serie</h2></div>
+            <SerieCard v-for="teleFilm in store.serie" :series="teleFilm"></SerieCard>
+        </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
-#lista-film {
-    div {
-        h2 {
-            padding: 15px 0 15px 15px;
+#app-body {
+    background-color: rgb(67, 67, 67);
+    #lista-film {
+        div {
+            h2 {
+                color: white;
+                padding: 15px 0 15px 15px;
+            }
+        }
+        #film-cnt {
+            display: flex;
+            flex-flow: row;
+            gap: 5px;
+            overflow-x: auto;
+            // flex-shrink: 5;
+        }
+    }
+    #lista-serie {
+        div {
+            h2 {
+                color: white;
+                padding: 15px 0 15px 15px;
+            }
         }
     }
 }
-#lista-serie {
-    div {
-        h2 {
-            padding: 15px 0 15px 15px;
-        }
-    }
-}
-// #film-cnt {
-//    display: flex;
-// }
 </style>

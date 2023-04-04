@@ -50,7 +50,6 @@
 </script>
 
 <template>
-    <div class="cards">
         <div class="card" :style="{backgroundImage: 'url(https://image.tmdb.org/t/p/w342'+movie.poster_path+')'}">
             <!-- <img :src="`https://image.tmdb.org/t/p/w342` + movie.poster_path" alt="locandina"> -->
             <div class="card-specs">
@@ -66,30 +65,24 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <style lang="scss" scoped>
-.cards {
-    // display: flex;
-    .card {
-        color: white;
-        height: 350px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: 0;
-        display: flex;
-        flex-flow: column;
-        .card-specs {
-            display: none;
-        }
+.card {
+    color: white;
+    height: 265px;
+    width: 206px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-position: 0;
+    .card-specs {
+        display: none;
     }
 }
-.cards {
     .card:hover {
         .card-specs {
             height: 100%;
-            width: 16.1%;
+            width: 100%;
             display: flex;
             flex-flow: column;
             justify-content: center;
@@ -97,7 +90,6 @@
             background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8), rgba(0,0,0,0.8));
         }
     }
-}
     .stelle {
         color: grey;
     }
