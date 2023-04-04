@@ -5,4 +5,5 @@ export const store = reactive({
     TVCall: 'https://api.themoviedb.org/3/search/tv?api_key=fab6325a9f2906bf51076f0a3ebd6c67',
     serie: [],
     userInput: "",
+    // chiamataImg: 'https://image.tmdb.org/t/p/w342'
 });
