@@ -34,7 +34,21 @@
 </template>
 
 <style lang="scss" scoped>
-#film-cnt {
-    // display: flex;
+#lista-film {
+    div {
+        h2 {
+            padding: 15px 0 15px 15px;
+        }
+    }
 }
+#lista-serie {
+    div {
+        h2 {
+            padding: 15px 0 15px 15px;
+        }
+    }
+}
+// #film-cnt {
+//    display: flex;
+// }
 </style>
