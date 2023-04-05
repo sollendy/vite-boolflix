@@ -70,6 +70,7 @@
 <style lang="scss" scoped>
 .card {
     color: white;
+    border: 1px solid white;
     height: 265px;
     width: 206px;
     background-repeat: no-repeat;

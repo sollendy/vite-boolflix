@@ -48,8 +48,9 @@
         #film-cnt {
             display: flex;
             flex-flow: row;
-            gap: 5px;
-            overflow-x: auto;
+            gap: 10px;
+            overflow: auto;
+            white-space: nowrap;
             // flex-shrink: 5;
         }
     }
