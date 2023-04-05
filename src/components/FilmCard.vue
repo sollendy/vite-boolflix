@@ -70,7 +70,7 @@
 <style lang="scss" scoped>
 .card {
     color: white;
-    border: 2px solid white;
+    border: 1.5px solid white;
     height: 265px;
     width: 206px;
     background-repeat: no-repeat;
@@ -91,8 +91,9 @@
             justify-content: center;
             gap: 3px;
             background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+            // display: block;
             // div {
-            //     width: 100%;
+            //     flex-shrink: 90;
             // }
         }
     }
