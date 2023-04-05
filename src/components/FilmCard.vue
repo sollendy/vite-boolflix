@@ -70,11 +70,12 @@
 <style lang="scss" scoped>
 .card {
     color: white;
-    border: 1px solid white;
+    border: 2px solid white;
     height: 265px;
     width: 206px;
     background-repeat: no-repeat;
     background-size: cover;
+    flex-shrink: 0;
     // background-position: 0;
     .card-specs {
         display: none;
@@ -82,6 +83,7 @@
 }
     .card:hover {
         .card-specs {
+            padding-left: 3px;
             height: 100%;
             width: 100%;
             display: flex;
@@ -89,6 +91,9 @@
             justify-content: center;
             gap: 3px;
             background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+            // div {
+            //     width: 100%;
+            // }
         }
     }
     .stelle {

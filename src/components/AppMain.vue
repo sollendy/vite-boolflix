@@ -46,12 +46,13 @@
             }
         }
         #film-cnt {
+            padding-left: 7.5px;
             display: flex;
             flex-flow: row;
             gap: 10px;
             overflow: auto;
             white-space: nowrap;
-            // flex-shrink: 5;
+            //  flex-shrink: 0;
         }
     }
     #lista-serie {
