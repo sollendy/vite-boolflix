@@ -49,8 +49,8 @@
 </script>
 
 <template>
-    <div class="card">
-        <img :src="`https://image.tmdb.org/t/p/w342`+series.poster_path" alt="locandina">
+    <div class="card" :style="{backgroundImage: 'url(https://image.tmdb.org/t/p/w342'+series.poster_path+')'}">
+        <!-- <img :src="`https://image.tmdb.org/t/p/w342`+series.poster_path" alt="locandina"> -->
         <div class="card-specs">
             <div>Titolo: <strong>{{ series.name }}</strong></div>
             <div>Titolo Originale: <i>{{ series.original_name }}</i></div>
@@ -67,6 +67,38 @@
 </template>
 
 <style lang="scss" scoped>
+.card {
+    color: white;
+    border: 1.5px solid white;
+    height: 265px;
+    width: 206px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+    // background-position: 0;
+    .card-specs {
+        display: none;
+    }
+}
+    .card:hover {
+        .card-specs {
+            padding-left: 3px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            gap: 3px;
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+            div {
+                white-space: normal;
+            }
+            // display: block;
+            // div {
+            //     flex-shrink: 90;
+            // }
+        }
+    }
     // div.card {
     //     img {
     //         width: 100px;

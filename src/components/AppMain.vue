@@ -30,7 +30,9 @@
         </div>
         <div id="lista-serie">
             <div><h2>le tue serie</h2></div>
-            <SerieCard v-for="teleFilm in store.serie" :series="teleFilm"></SerieCard>
+            <div id="serie-cnt">
+                <SerieCard v-for="teleFilm in store.serie" :series="teleFilm"></SerieCard>
+            </div>
         </div>
     </section>
 </template>
@@ -61,6 +63,14 @@
                 color: white;
                 padding: 15px 0 15px 15px;
             }
+        }
+        #serie-cnt {
+            padding-left: 7.5px;
+            display: flex;
+            flex-flow: row;
+            gap: 10px;
+            overflow: auto;
+            white-space: nowrap;
         }
     }
 }

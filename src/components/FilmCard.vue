@@ -91,6 +91,9 @@
             justify-content: center;
             gap: 3px;
             background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+            div {
+                white-space: normal;
+            }
             // display: block;
             // div {
             //     flex-shrink: 90;
