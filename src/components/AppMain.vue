@@ -24,13 +24,13 @@
     <section id="app-body">
         <div id="lista-film">
             <div><h2>i tuoi film</h2></div>
-            <div id="film-cnt">
+            <div id="film-cnt" class="pb-1">
                 <FilmCard v-for="pellicola in store.film" :movie="pellicola"></FilmCard>
             </div>
         </div>
-        <div id="lista-serie">
+        <div id="lista-serie" class="pb-5">
             <div><h2>le tue serie</h2></div>
-            <div id="serie-cnt">
+            <div id="serie-cnt" class="pb-1">
                 <SerieCard v-for="teleFilm in store.serie" :series="teleFilm"></SerieCard>
             </div>
         </div>

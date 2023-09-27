@@ -76,12 +76,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     flex-shrink: 0;
+    transition: 0.5s;
     // background-position: 0;
     .card-specs {
         display: none;
     }
 }
     .card:hover {
+        height: 275px;
+        width: 218px;
         .card-specs {
             padding-left: 3px;
             height: 100%;
